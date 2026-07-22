@@ -419,6 +419,9 @@ button {
 
 .disconnectersNavigate {
     padding-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navBtns {
@@ -454,4 +457,91 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.arrows {
+    border: 1px solid var(--gray);
+    padding: 5px;
+    display: flex;
+    gap: 4px;
+}
+
+.leftArrow,
+.rightArrow {
+    background-color: var(--gray);
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.leftArrow svg,
+.rightArrow svg {
+    display: block;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+    background-color: var(--black);
+}
+
+.leftArrow:hover svg path,
+.rightArrow:hover svg path {
+    stroke: var(--white);
+}
+
+.disconnectersCard {
+    border: 1px solid var(--gray);
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.disconnectersCardBottom {
+    padding: 10px 20px 20px 20px;
+}
+
+.disconnectersCardTitle {
+    color: var(--black);
+    font-family: 'Geologica';
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.disconnectersCardPrice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.disconnectersCardPriceTxt {
+    font-family: 'Geologica';
+    font-weight: 600;
+    color: var(--black);
+}
+
+.disconnectersCardBuyBtn {
+    display: inline-block;
+    color: var(--black);
+    padding: 10px 20px; 
+    border: 1px solid var(--gray);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    white-space: nowrap; 
+}
+
+.disconnectersCardBuyBtn:hover {
+    background-color: var(--black);
+    color: var(--white);
+    border-color: var(--black);
 }
