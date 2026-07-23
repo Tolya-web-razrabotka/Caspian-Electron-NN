@@ -1135,3 +1135,100 @@ button {
     bottom: -50px;
     right: 0px;
 }
+
+
+
+
+/* Секция "Как мы работаем" */
+
+.howWeWorkSection {
+    background-image: url("../img/howWeWorkBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 705px;
+    width: 100%;
+}
+
+.howWeWorkInner {
+    padding: 137px 255px 137px 255px;
+}
+
+.howWeWorkCards {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.howWeWorkCard {
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+
+.howWeWorkCardOne {
+    background-image: url("../img/svg/howWeWorkCards/1.svg");
+    padding: 88px 0px 0px 10px;
+}
+
+
+.howWeWorkCardTwo {
+    background-image: url("../img/svg/howWeWorkCards/2.svg");
+    padding: 78px 0px 0px 45px;
+}
+
+.howWeWorkCardThree {
+    background-image: url("../img/svg/howWeWorkCards/3.svg");
+    padding: 78px 0px 0px 45px;
+}
+
+.howWeWorkCardFour {
+    background-image: url("../img/svg/howWeWorkCards/4.svg");
+    padding: 78px 0px 0px 45px;
+}
+
+.howWeWorkCardFive {
+    background-image: url("../img/svg/howWeWorkCards/5.svg");
+    padding: 78px 0px 0px 45px;
+}
+
+.howWeWorkContact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contactBlockText {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: var(--fullBlack);
+    margin: 0;
+}
+
+.contactBlockEmail,
+.contactBlockPhone {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block; 
+    max-width: 100%; 
+
+    display: block;
+    width: fit-content; 
+}
+
+.contactBlockEmail:hover,
+.contactBlockPhone:hover {
+    color: var(--orange);
+}
+
+
