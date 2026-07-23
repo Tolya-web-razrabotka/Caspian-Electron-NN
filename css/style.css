@@ -1243,11 +1243,16 @@ button {
     background-position: center;
     background-size: cover;
     min-height: 410px;
+    max-height: 410px;
     width: 100%;
 }
 
 .licensesInner {
     padding: 20px 255px;
+    display: grid;
+    grid-template-columns: minmax(0px, 644px) 1fr;
+    align-items: center;
+    transform: translateY(-150px); 
 }
 
 .licensesTitle {
