@@ -1018,8 +1018,6 @@ button {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
 .aboutCompanyBanner:hover .aboutBannerTitle {
     background-color: #0a1a5e;
 }
@@ -1062,12 +1060,12 @@ button {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 174px; /* фиксированная ширина */
-    height: 120px; /* фиксированная высота */
+    width: 174px; 
+    height: 120px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none; /* чтобы не мешать кликам по баннеру */
+    pointer-events: none; 
 }
 
 .aboutBannerIcon img {
@@ -1076,5 +1074,64 @@ button {
     width: auto;
     height: auto;
     display: block;
-    object-fit: contain; /* сохраняет пропорции */
+    object-fit: contain;
+}
+
+.reasonsInner {
+    padding: 0px 255px;
+}
+
+.reasonsNavigate {
+    padding-bottom: 68px;
+}
+
+.reasonsCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.reasonCard {
+    position: relative;
+    min-height: 230px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain; 
+    background-color: #E4EBF5;
+    padding: 20px 30px;
+}
+
+.reasonCardOne {
+    background-image: url("../img/svg/numbers/01.svg");
+}
+
+.reasonCardTwo {
+    background-image: url("../img/svg/numbers/02.svg");
+}
+
+.reasonCardThree {
+    background-image: url("../img/svg/numbers/03.svg");
+}
+
+.reasonCardTitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: var(--black);
+    font-size: 27px;
+}
+
+.reasonCardDesc {
+    max-width: 290px;
+    width: 100%;
+    padding-top: 16px;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: var(--fullBlack);
+}
+
+.reasonCardIcon {
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
 }
