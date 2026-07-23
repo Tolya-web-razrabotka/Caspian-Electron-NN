@@ -1232,3 +1232,34 @@ button {
 }
 
 
+
+
+
+/* секция "ЛИЦЕНЗИИ И СЕРТИФИКАТЫ" */
+
+.licensesSection {
+    background-image: url("../img/licensesBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 410px;
+    width: 100%;
+}
+
+.licensesInner {
+    padding: 20px 255px;
+}
+
+.licensesTitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 39px;
+    color: var(--white);
+}
+
+.licensesDesk {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: var(--white);
+}
