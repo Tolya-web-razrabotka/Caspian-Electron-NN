@@ -181,9 +181,9 @@ button {
     --orange: #FF461E;
     --white: #FFFFFF;
     --black: #050F36;
+    --fullBlack: #000000;
     --blue: #0B50AA;
     --gray: #DBE1EA;
-
     --error-text: #FE3B3B;
 }
 
@@ -258,7 +258,7 @@ button {
     text-transform: uppercase;
 }
 
-.heroContent h2 {
+.heroContent .h2 {
     display: inline-block;
     font-size: 25px;
     font-weight: 300;
@@ -890,3 +890,167 @@ button {
     padding-top: 10px;
     padding-bottom: 44px;
 }
+
+
+
+
+/* Секция "О компании" */
+
+.aboutCompanySection {
+    background-image: url("../img/aboutBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+}
+
+.aboutCompanyInner {
+    margin-top: 200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0px, 810px) auto; 
+    justify-content: space-between;
+    padding: 0px 255px;
+}
+
+.aboutDesc {
+    padding-top: 50px;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 100;
+    color: var(--fullBlack);
+    font-size: 18px;
+}
+
+.reasonsTitle {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--fullBlack);
+}
+
+.reasonsLists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+.reasonsList {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: var(--fullBlack);
+    padding-left: 20px;
+}
+
+.reasonsList li {
+    list-style: disc; 
+    margin-bottom: 8px; 
+}
+
+.reasonsList li {
+    list-style: none; 
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.reasonsList li::before {
+    content: '•'; 
+    color: var(--black); 
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.aboutCompanyAdvantages {   
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.aboutTitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    color: #E1E9F4;
+    font-size: 60px;
+    padding-bottom: 20px;
+}
+
+.aboutAdvantage {
+    display: flex;
+    align-items: flex-end; 
+    gap: 37px;
+}
+
+.aboutAdvantageNumber {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 75px;
+    color: var(--blue);
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.aboutAgvantageDesc {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 400;
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.3; 
+    margin: 0;
+    padding-bottom: 4px; 
+}
+
+.aboutCompanyBanner {
+    display: block;
+    max-width: 449px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutCompanyBanner:hover .aboutBannerTitle {
+    background-color: #0a1a5e;
+}
+
+.aboutCompanyBanner:hover .aboutBannerLink {
+    background-color: #d95a0e;
+}
+
+.aboutCompanyBanner:hover .aboutBannerLink svg {
+    transform: translateX(8px);
+}
+
+.aboutBannerTitle {
+    padding: 22px 30px 18px 30px;
+    background-color: var(--blue);
+    font-family: 'Geologica', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.aboutBannerLink {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    text-transform: uppercase;
+    background-color: var(--orange);
+    padding: 14px 31px 16px 31px;
+    transition: all 0.3s ease;
+}
+
+.aboutBannerLink svg {
+    transition: transform 0.3s ease;
+}
+
