@@ -1268,3 +1268,68 @@ button {
     font-size: 18px;
     color: var(--white);
 }
+
+
+/* Секция "Наши Партнеры" */
+
+.ourPartnersInner {
+    padding: 0px 255px;
+}
+
+.ourPartnersCard {
+    position: relative;
+    display: inline-block;
+    padding: 15px; 
+}
+
+.ourPartnersCard img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.ourPartnersCard::before {
+    content: '';
+    position: absolute;
+    top: 15px; 
+    left: 15px; 
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #CCD3DE;
+    border-left: 1px solid #CCD3DE;
+    z-index: 2;
+}
+
+.ourPartnersCard::after {
+    content: '';
+    position: absolute;
+    top: 15px; 
+    right: 15px; 
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #CCD3DE;
+    border-right: 1px solid #CCD3DE;
+    z-index: 2;
+}
+
+.ourPartnersCard .corner-bottom-left {
+    position: absolute;
+    bottom: 15px; 
+    left: 15px; 
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #CCD3DE;
+    border-left: 1px solid #CCD3DE;
+    z-index: 2;
+}
+
+.ourPartnersCard .corner-bottom-right {
+    position: absolute;
+    bottom: 15px; 
+    right: 15px; 
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #CCD3DE;
+    border-right: 1px solid #CCD3DE;
+    z-index: 2;
+}
