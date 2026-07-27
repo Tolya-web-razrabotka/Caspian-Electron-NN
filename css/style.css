@@ -451,7 +451,7 @@ button {
 }
 
 .disconnectersNavigate {
-    padding-top: 120px;
+    padding-top: 140px;
     padding-bottom: 30px;
     display: flex;
     align-items: center;
@@ -986,11 +986,6 @@ button {
 }
 
 .reasonsList li {
-    list-style: disc; 
-    margin-bottom: 8px; 
-}
-
-.reasonsList li {
     list-style: none; 
     position: relative;
     padding-left: 20px;
@@ -1287,6 +1282,8 @@ button {
     min-height: 410px;
     max-height: 410px;
     width: 100%;
+    position: relative;
+     z-index: 5;
 }
 
 .licensesInner {
@@ -1311,6 +1308,100 @@ button {
     font-size: 18px;
     color: var(--white);
 }
+
+
+
+
+/* Секция "ДОСТАВЛЯЕМ БЕСПЛАТНО!" */
+
+.freeShippingSection {
+    position: relative;
+}
+
+.freeShippingBgImg {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.freeShippingInner {
+    position: relative;
+    z-index: 2;
+    padding: 132px 255px 0px 255px;
+    
+}
+
+.freeShippingContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.freeShippingContentInfo {
+    position: relative;
+    max-width: 508px;
+}
+
+.freeShippingContentInfoDelivery {
+    margin-top: 68px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 44px;
+}
+
+.freeShippingInfoBg {
+    position: absolute;
+    top: 0;
+    left: -100px;
+}
+
+.freeShippingContentInfoDelivery img:last-child {
+    margin-left: 50px;    
+}
+
+.freeShippingContentInfoTitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 39px;
+    color: var(--black);
+}
+
+
+.freeShippingOrderDeliveryTitle {
+    margin-bottom: 30px;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--fullBlack);
+}
+
+.freeShippingOrderDelivery ul {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    gap: 75px;
+}
+
+.freeShippingOrderDelivery ul li {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: var(--fullBlack);
+    list-style: disc; 
+    list-style: none; 
+    position: relative;
+    padding-left: 20px;
+}
+
+.freeShippingOrderDelivery ul li::before {
+    content: '•'; 
+    color: var(--black); 
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+
 
 
 /* Секция "Наши Партнеры" */
