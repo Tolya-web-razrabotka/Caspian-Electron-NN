@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // СЛАЙДЕР "6 ПРИЧИН РАБОТАТЬ С НАМИ" 
+    // СЛАЙДЕР "6 ПРИЧИН" 
     $('.reasonsCards').slick({
         autoplay: false,
         autoplaySpeed: 3500,
@@ -42,14 +42,14 @@ $(document).ready(function() {
         ]
     });
 
-    // СЛАЙДЕР "НАШИ ПАРТНЕРЫ" 
+    // СЛАЙДЕР "НАШИ ПАРТНЕРЫ"
     $('.ourPartnersCards').slick({
         autoplay: false,
         autoplaySpeed: 3500,
         slidesToShow: 5,
         slidesToScroll: 5,
         dots: false,
-        swipeToSlide: false,             
+        swipeToSlide: false,
         variableWidth: false,
         arrows: true,
         infinite: false,
@@ -87,7 +87,7 @@ $(document).ready(function() {
                     slidesToScroll: 2,
                     dots: true,
                     arrows: false,
-                    swipeToSlide: true    
+                    swipeToSlide: true
                 }
             },
             {
@@ -97,7 +97,51 @@ $(document).ready(function() {
                     slidesToScroll: 1,
                     dots: true,
                     arrows: false,
-                    swipeToSlide: true   
+                    swipeToSlide: true
+                }
+            }
+        ]
+    });
+
+    // СЛАЙДЕР "РАЗЪЕДИНИТЕЛИ"
+    $('.disconnectersCards').slick({
+        autoplay: false,
+        autoplaySpeed: 3500,
+        slidesToShow: 3,
+        slidesToScroll: 1,             
+        dots: false,
+        swipeToSlide: true,
+        variableWidth: false,
+        arrows: true,
+        infinite: false,
+        speed: 750,
+        fade: false,
+        easing: 'easeInOutQuart',
+        prevArrow: $('.disconnectersPrevArrow'),
+        nextArrow: $('.disconnectersNextArrow'),
+        
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        touchThreshold: 10,
+        waitForAnimate: false,
+        adaptiveHeight: true,
+        
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
+                    swipeToSlide: true
                 }
             }
         ]

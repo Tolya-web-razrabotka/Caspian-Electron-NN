@@ -236,7 +236,6 @@ button {
     display: flex;
     align-items: center;
     padding: 0 255px;
-    /* Убираем margin: 0 -80px; */
     width: 100%;
 }
 
@@ -555,16 +554,45 @@ button {
     pointer-events: none !important;
 }
 
+.disconnectersSlider {
+    margin: 0 -15px;
+    position: relative;
+    overflow: visible !important;
+    padding-bottom: 10px;
+}
+
 .disconnectersCards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    margin: 0 -15px;
+}
+
+.disconnectersCards .slick-list {
+    overflow: hidden !important;
+    margin: 0 -15px;
+}
+
+.disconnectersCards .slick-track {
+    overflow: visible !important;
+}
+
+.disconnectersCards .slick-slide {
+    padding: 0 15px;
 }
 
 .disconnectersCard {
     border: 1px solid var(--gray);
     display: inline-flex;
     flex-direction: column;
+    margin: 0 15px;
+    background: #FFFFFF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.disconnectersCard:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.disconnectersCardTop {
+    flex: 1;
 }
 
 .disconnectersCardBottom {
@@ -626,7 +654,49 @@ button {
     border-color: var(--black);
 }
 
+.disconnectersArrows {
+    border: 1px solid var(--gray);
+    padding: 5px;
+    display: flex;
+    gap: 4px;
+}
 
+.disconnectersArrows .leftArrow,
+.disconnectersArrows .rightArrow {
+    background-color: var(--gray);
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.disconnectersArrows .leftArrow:not(.slick-disabled):hover,
+.disconnectersArrows .rightArrow:not(.slick-disabled):hover {
+    background-color: var(--black);
+}
+
+.disconnectersArrows .leftArrow:not(.slick-disabled):hover svg path,
+.disconnectersArrows .rightArrow:not(.slick-disabled):hover svg path {
+    stroke: var(--white);
+}
+
+.disconnectersArrows .leftArrow.slick-disabled,
+.disconnectersArrows .rightArrow.slick-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.disconnectersSlider .slick-prev,
+.disconnectersSlider .slick-next {
+    display: none !important;
+}
 
 /* Секция с Формой */
 
