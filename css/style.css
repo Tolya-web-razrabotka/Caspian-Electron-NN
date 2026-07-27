@@ -520,14 +520,38 @@ button {
     display: block;
 }
 
-.leftArrow:hover,
-.rightArrow:hover {
+.leftArrow:hover:not(.slick-disabled),
+.rightArrow:hover:not(.slick-disabled) {
     background-color: var(--black);
 }
 
-.leftArrow:hover svg path,
-.rightArrow:hover svg path {
+.leftArrow:hover:not(.slick-disabled) svg path,
+.rightArrow:hover:not(.slick-disabled) svg path {
     stroke: var(--white);
+}
+
+.leftArrow.slick-disabled,
+.rightArrow.slick-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none; 
+}
+
+.leftArrow.slick-disabled:hover,
+.rightArrow.slick-disabled:hover {
+    background-color: var(--gray);
+}
+
+.leftArrow.slick-disabled:hover svg path,
+.rightArrow.slick-disabled:hover svg path {
+    stroke: #050F36; 
+}
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+    opacity: 0.4 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
 }
 
 .disconnectersCards {
@@ -1114,18 +1138,58 @@ button {
     object-fit: contain;
 }
 
+
+
+/* Секция "6 ПРИЧИН РАБОТАТЬ С НАМИ" */
+
 .reasonsInner {
     padding: 0px 255px;
 }
 
 .reasonsNavigate {
     padding-bottom: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.reasonsCards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+.reasonsNavigateLeft {
+    flex: 1;
+}
+
+.reasonsSlider {
+    margin: 0 -15px;
+    position: relative;
+    overflow: visible !important;
+}
+    
+.reasonsSlider {
+    overflow: visible !important;
+}
+
+.reasonsCards .slick-list {
+    overflow: visible !important;
+}
+
+.reasonsCards .slick-track {
+    overflow: visible !important;
+}
+
+.reasonsCards .slick-slide {
+    overflow: visible !important;
+}
+
+.reasonCard {
+    overflow: visible !important;
+}
+
+.reasonCardIcon {
+    overflow: visible !important;
+}
+
+.reasonCardIcon img {
+    display: block;
+    overflow: visible !important;
 }
 
 .reasonCard {
@@ -1136,10 +1200,20 @@ button {
     background-size: contain; 
     background-color: #E4EBF5;
     padding: 20px 30px;
+    margin: 0 15px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reasonCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .reasonCardOne {
     background-image: url("../img/svg/numbers/01.svg");
+    background-size: 50%;
+    padding-right: 50px;
 }
 
 .reasonCardTwo {
@@ -1150,7 +1224,21 @@ button {
     background-image: url("../img/svg/numbers/03.svg");
 }
 
+.reasonCardFour {
+    background-image: url("../img/svg/numbers/04.svg");
+}
+
+.reasonCardFive {
+    background-image: url("../img/svg/numbers/05.svg");
+}
+
+.reasonCardSix {
+    background-image: url("../img/svg/numbers/06.svg");
+}
+
+
 .reasonCardTitle {
+    text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     color: var(--black);
@@ -1171,6 +1259,25 @@ button {
     position: absolute;
     bottom: -50px;
     right: 0px;
+}
+
+.reasonsNavigateRight {
+    flex-shrink: 0;
+}
+
+.slick-dots {
+    bottom: -50px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #050F36;
+    opacity: 0.3;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #050F36;
+    opacity: 1;
 }
 
 
