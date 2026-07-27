@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // СЛАЙДЕР "6 ПРИЧИН РАБОТАТЬ С НАМИ" 
     $('.reasonsCards').slick({
         autoplay: false,
         autoplaySpeed: 3500,
@@ -8,7 +9,7 @@ $(document).ready(function() {
         swipeToSlide: true,
         variableWidth: false,
         arrows: true,
-        infinite: false,          
+        infinite: false,
         speed: 750,
         fade: false,
         easing: 'easeInOutQuart',
@@ -36,6 +37,67 @@ $(document).ready(function() {
                     slidesToScroll: 1,
                     dots: true,
                     arrows: false
+                }
+            }
+        ]
+    });
+
+    // СЛАЙДЕР "НАШИ ПАРТНЕРЫ" 
+    $('.ourPartnersCards').slick({
+        autoplay: false,
+        autoplaySpeed: 3500,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        dots: false,
+        swipeToSlide: false,             
+        variableWidth: false,
+        arrows: true,
+        infinite: false,
+        speed: 750,
+        fade: false,
+        easing: 'easeInOutQuart',
+        prevArrow: $('.partnersPrevArrow'),
+        nextArrow: $('.partnersNextArrow'),
+        
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        touchThreshold: 10,
+        waitForAnimate: false,
+        adaptiveHeight: true,
+        
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: true,
+                    arrows: false,
+                    swipeToSlide: true    
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
+                    swipeToSlide: true   
                 }
             }
         ]

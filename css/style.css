@@ -221,6 +221,7 @@ button {
     margin: 0 auto;
     position: relative;
     width: 100%;
+    padding: 0px;
     /* overflow-x: hidden; */
 }
 
@@ -1502,30 +1503,55 @@ button {
     padding: 0px 255px;
 }
 
+.partnersSlider {
+    margin: 0 -15px;
+    position: relative;
+    overflow: visible !important;
+    padding-bottom: 10px;
+}
+
 .ourPartnersCards {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    margin: 0 -15px;
+}
+
+.ourPartnersCards .slick-list {
+    overflow: hidden !important;
+    margin: 0 -15px;
+}
+
+.ourPartnersCards .slick-track {
+    overflow: visible !important;
 }
 
 .ourPartnersCard {
     position: relative;
     display: inline-block;
-    padding: 35px; 
+    padding: 35px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin: 0 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ourPartnersCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .ourPartnersCard img {
     display: block;
     width: 100%;
-    max-height: 62px; 
-    height: auto;  
-    object-fit: contain; 
+    max-height: 62px;
+    height: auto;
+    object-fit: contain;
 }
 
 .ourPartnersCard::before {
     content: '';
     position: absolute;
-    top: 15px; 
-    left: 15px; 
+    top: 15px;
+    left: 15px;
     width: 20px;
     height: 20px;
     border-top: 1px solid #CCD3DE;
@@ -1536,8 +1562,8 @@ button {
 .ourPartnersCard::after {
     content: '';
     position: absolute;
-    top: 15px; 
-    right: 15px; 
+    top: 15px;
+    right: 15px;
     width: 20px;
     height: 20px;
     border-top: 1px solid #CCD3DE;
@@ -1547,8 +1573,8 @@ button {
 
 .ourPartnersCard .corner-bottom-left {
     position: absolute;
-    bottom: 15px; 
-    left: 15px; 
+    bottom: 15px;
+    left: 15px;
     width: 20px;
     height: 20px;
     border-bottom: 1px solid #CCD3DE;
@@ -1558,8 +1584,8 @@ button {
 
 .ourPartnersCard .corner-bottom-right {
     position: absolute;
-    bottom: 15px; 
-    right: 15px; 
+    bottom: 15px;
+    right: 15px;
     width: 20px;
     height: 20px;
     border-bottom: 1px solid #CCD3DE;
@@ -1567,6 +1593,108 @@ button {
     z-index: 2;
 }
 
+.partnersArrows {
+    border: 1px solid var(--gray);
+    padding: 5px;
+    display: flex;
+    gap: 4px;
+}
+
+.partnersArrows .leftArrow,
+.partnersArrows .rightArrow {
+    background-color: var(--gray);
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.partnersArrows .leftArrow:not(.slick-disabled):hover,
+.partnersArrows .rightArrow:not(.slick-disabled):hover {
+    background-color: var(--black);
+}
+
+.partnersArrows .leftArrow:not(.slick-disabled):hover svg path,
+.partnersArrows .rightArrow:not(.slick-disabled):hover svg path {
+    stroke: var(--white);
+}
+
+.partnersArrows .leftArrow.slick-disabled,
+.partnersArrows .rightArrow.slick-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.partnersSlider .slick-prev,
+.partnersSlider .slick-next {
+    display: none !important;
+}
+
+@media (max-width: 1400px) {
+    .ourPartnersInner {
+        padding: 0px 100px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .ourPartnersInner {
+        padding: 0px 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .ourPartnersInner {
+        padding: 0px 30px;
+    }
+    
+    .partnersNavigate {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ourPartnersInner {
+        padding: 0px 15px;
+    }
+    
+    .ourPartnersCard {
+        padding: 20px;
+    }
+    
+    .ourPartnersCard img {
+        max-height: 40px;
+    }
+    
+    .partnersArrows .leftArrow,
+    .partnersArrows .rightArrow {
+        width: 40px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .ourPartnersInner {
+        padding: 0px 10px;
+    }
+    
+    .ourPartnersCard {
+        padding: 15px;
+    }
+    
+    .ourPartnersCard img {
+        max-height: 30px;
+    }
+}
 
 
 /* Секция "Остались вопросы" */
