@@ -1210,39 +1210,14 @@ button {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.reasonCardOne {
-    background-image: url("../img/svg/numbers/01.svg");
-    background-size: 50%;
-    padding-right: 50px;
-}
-
-.reasonCardTwo {
-    background-image: url("../img/svg/numbers/02.svg");
-}
-
-.reasonCardThree {
-    background-image: url("../img/svg/numbers/03.svg");
-}
-
-.reasonCardFour {
-    background-image: url("../img/svg/numbers/04.svg");
-}
-
-.reasonCardFive {
-    background-image: url("../img/svg/numbers/05.svg");
-}
-
-.reasonCardSix {
-    background-image: url("../img/svg/numbers/06.svg");
-}
-
-
 .reasonCardTitle {
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     color: var(--black);
     font-size: 27px;
+    position: relative;
+    z-index: 3;
 }
 
 .reasonCardDesc {
@@ -1253,12 +1228,22 @@ button {
     font-weight: 100;
     font-size: 18px;
     color: var(--fullBlack);
+    position: relative;
+    z-index: 3;
+}
+
+.reasonsCardNumber {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
 }
 
 .reasonCardIcon {
     position: absolute;
     bottom: -50px;
     right: 0px;
+    z-index: 2;
 }
 
 .reasonsNavigateRight {
