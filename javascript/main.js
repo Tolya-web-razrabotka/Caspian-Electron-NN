@@ -1,4 +1,22 @@
 $(document).ready(function() {
+    // === ГЛАВНЫЙ СЛАЙДЕР ===
+    $('.mainSlider').slick({
+        autoplay: true,             
+        autoplaySpeed: 1500,        
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,                
+        swipeToSlide: true,
+        variableWidth: false,        
+        arrows: false,
+        infinite: true,
+        speed: 750,
+        fade: true,
+        easing: 'easeInOutQuart',
+
+    });
+
+    // === ОСТАЛЬНЫЕ СЛАЙДЕРЫ ===
     // СЛАЙДЕР "6 ПРИЧИН" 
     $('.reasonsCards').slick({
         autoplay: false,
