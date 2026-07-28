@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('.mainSlider').slick({
         autoplay: true,             
-        autoplaySpeed: 750,        
+        autoplaySpeed: 1500,        
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true, 
@@ -11,26 +11,8 @@ $(document).ready(function() {
         speed: 750,
         fade: true,
         easing: 'easeInOutQuart',
-        onInit: function(slick) {
-            updateProgressBar(slick.currentSlide);
-        },
-        onAfterChange: function(slick, currentSlide) {
-            updateProgressBar(currentSlide);
-        }
     });
 
-    function updateProgressBar(currentIndex) {
-        const $steps = $('.heroNavigation .step');
-        const totalSlides = $steps.length;
-        
-        $steps.each(function(index) {
-            if (index === currentIndex) {
-                $(this).addClass('active');
-            } else {
-                $(this).removeClass('active');
-            }
-        });
-    }
 
     // === ОСТАЛЬНЫЕ СЛАЙДЕРЫ ===
     // СЛАЙДЕР "6 ПРИЧИН" 

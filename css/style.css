@@ -245,7 +245,7 @@ button {
     min-height: 894px;
     display: flex;
     align-items: center;
-    padding: 0 255px;
+    padding: 0 255px 0px 255px;
     width: 100%;
     box-sizing: border-box; 
 }
@@ -525,6 +525,7 @@ button {
     border-color: #FF461E;
     opacity: 0.8;
 }
+
 
 .catalogCards {
     margin-top: 175px;
