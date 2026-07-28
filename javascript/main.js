@@ -1,20 +1,36 @@
 $(document).ready(function() {
-    // === ГЛАВНЫЙ СЛАЙДЕР ===
     $('.mainSlider').slick({
         autoplay: true,             
-        autoplaySpeed: 1500,        
+        autoplaySpeed: 750,        
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: true,                
+        dots: true, 
         swipeToSlide: true,
-        variableWidth: false,        
         arrows: false,
         infinite: true,
         speed: 750,
         fade: true,
         easing: 'easeInOutQuart',
-
+        onInit: function(slick) {
+            updateProgressBar(slick.currentSlide);
+        },
+        onAfterChange: function(slick, currentSlide) {
+            updateProgressBar(currentSlide);
+        }
     });
+
+    function updateProgressBar(currentIndex) {
+        const $steps = $('.heroNavigation .step');
+        const totalSlides = $steps.length;
+        
+        $steps.each(function(index) {
+            if (index === currentIndex) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    }
 
     // === ОСТАЛЬНЫЕ СЛАЙДЕРЫ ===
     // СЛАЙДЕР "6 ПРИЧИН" 

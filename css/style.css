@@ -407,8 +407,9 @@ button {
 }
 
 .heroNavigation {
+    margin-top: 200px;
     position: relative;
-    z-index: 2;
+    z-index: 5;
     margin-top: 130px;
     margin-bottom: 30px;
     display: flex;
@@ -421,20 +422,37 @@ button {
 }
 
 .slider-container {
-  display: flex;
-  gap: 15px; 
-  align-items: center; 
+    display: flex;
+    gap: 15px; 
+    align-items: center; 
 }
 
 .step {
-  width: 20px;
-  height: 20px;
-  border: 1px solid rgba(217, 217, 217, 0.5); 
-  background-color: rgba(50, 50, 50, 0.3); 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(217, 217, 217, 0.5); 
+    background-color: rgba(50, 50, 50, 0.3); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Добавляем плавность */
+}
+
+.step.active {
+    border-color: var(--orange); /* Подсветка активного шага */
+}
+
+.inner-square {
+    width: 8px;
+    height: 8px;
+    background-color: var(--orange); 
+    opacity: 0; /* Скрыт по умолчанию */
+    transition: opacity 0.3s ease;
+}
+
+.step.active .inner-square {
+    opacity: 1; /* Показываем только у активного */
 }
 
 .inner-square {
@@ -443,7 +461,73 @@ button {
   background-color: var(--orange); 
 }
 
+
+.slick-dots {
+    position: absolute;
+    right: 160px;
+    bottom: 310px;
+    display: flex !important;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slick-dots li {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 1px solid rgba(217, 217, 217, 0.5);
+    outline: none;
+    background: rgba(50, 50, 50, 0.3);
+    border-radius: 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.slick-dots li button::before {
+    display: none;
+}
+
+.slick-dots li.slick-active button {
+    border-color: #FF461E;
+    background: rgba(255, 70, 30, 0.1);
+}
+
+.slick-dots li.slick-active button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #FF461E;
+}
+
+.slick-dots li button:hover {
+    border-color: #FF461E;
+    opacity: 0.8;
+}
+
 .catalogCards {
+    margin-top: 175px;
     position: relative;
     z-index: 2;
     display: grid;
@@ -457,7 +541,7 @@ button {
     box-shadow: 0 10px 80px rgba(0, 0, 0, 0.08);
     padding: 15px;
     
-    width: 100%;
+    width: 108%;
     box-sizing: border-box; 
 }
 
@@ -1376,22 +1460,6 @@ button {
 .reasonsNavigateRight {
     flex-shrink: 0;
 }
-
-.slick-dots {
-    bottom: -50px;
-}
-
-.slick-dots li button:before {
-    font-size: 12px;
-    color: #050F36;
-    opacity: 0.3;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #050F36;
-    opacity: 1;
-}
-
 
 
 
